@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creepy Human Body Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e2e2e2;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Creepy Human Body Facts</h1>
+        <ul id="facts-list"></ul>
+        <button id="generate-facts">Generate Facts</button>
+    </div>
+    <script>
+        const facts = [
+            "Humans shed about 40 pounds of skin in their lifetime, which contributes to household dust.",
+            "The human body is home to trillions of bacteria, outnumbering human cells by about 10 to 1.",
+            "The average human head has about 100,000 hair follicles, and each hair can grow for about 2 to 6 years before falling out.",
+            "Babies are born with approximately 270 bones, but as they grow, some bones fuse together, resulting in an adult having only 206 bones.",
+            "Nerve impulses travel to and from the brain at speeds of up to 120 meters per second (about 268 miles per hour).",
+            "The human body can produce enough heat in 30 minutes to boil a half-gallon of water.",
+            "The human eye can distinguish about 10 million different colors, but the brain can create optical illusions.",
+            "The stomach produces hydrochloric acid strong enough to dissolve metal, but the stomach lining regenerates itself every few days.",
+            "During REM sleep, the brain sends signals to inhibit muscle activity, which can lead to sleep paralysis.",
+            "Fingernails grow faster than toenails, and the growth rate can be influenced by factors such as age, season, and diet."
+        ];
+
+        document.getElementById('generate-facts').addEventListener('click', function() {
+            const factsList = document.getElementById('facts-list');
+            factsList.innerHTML = ''; // Clear previous facts
+            facts.forEach(fact => {
+                const li = document.createElement('li');
+                li.textContent = fact;
+                factsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
